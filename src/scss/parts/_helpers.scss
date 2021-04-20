@@ -1,0 +1,127 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    & main{
+        flex-grow: 1;
+    }
+
+    & video{
+        width: 100%;
+        height: auto;
+    }
+
+    h1{
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    h2{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    
+    .product{
+        
+        text-align: center;
+        margin-bottom: 20px;
+    
+        & .photo{
+            padding-top: 100%;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+            position: relative;
+    
+            & .actions-wrapper{
+    
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                line-height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                background: rgba(black, .7);
+                transition: opacity .4s;
+                opacity: 0;
+                
+                & .actions{
+                    
+                    transform: translateY(20px);
+                    transition: transform .4s;
+                    
+                    & a{
+                        display: inline-block;
+                        color: #fff;
+                        margin: 0 10px;
+                        
+                        & i{
+                            font-size: 32px;
+                            line-height: 40px;
+                        }
+                        
+                        & span, & i{
+                            display: block;
+                        }
+                    }
+                }
+                
+                &:hover{
+                    
+                    opacity: 1;
+    
+                    & .actions{
+                        transform: none;
+                    }
+                }
+            }
+        }
+    
+        & .product-header{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 27px;
+        }
+    
+        & .price{
+            color: $primary-color;
+            font-weight: 700;
+    
+        }
+    }
+    
+    #instructions{
+        border-top: 1px dashed #ccc;
+        position: relative;
+    
+        &:before{
+            content: '';
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: -30px;
+            left: 30%;
+            background: url(/img/scissors.svg);
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    .btn{
+    
+        & i{
+            display: inline-block;
+        }
+    
+        & span{
+            display: inline-block;
+            transform: translateY(-2px);
+        }
+    }
+}

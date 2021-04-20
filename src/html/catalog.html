@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html')
+</head>
+<body>
+    <header>
+        @@include('./parts/nav.html')
+    </header>
+    @@include('./parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="main">
+            <section id="catalog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1>Каталог продукции</h1>
+                        </div>
+                    </div>
+                    <div class="row flex">
+                        @@loop('./parts/product-card.html', './data/products-catalog.json')
+                    </div>
+                    <div class="col s12 center-align">
+                        <ul class="pagination">
+                            <li><a href="">1</a></li>
+                            <li><a href="javascript:void(0);">…</a></li>
+                            <li><a href="">12</a></li>
+                            <li class="active"><a href="">13</a></li>
+                            <li><a href="">14</a></li>
+                            <li><a href="javascript:void(0);">…</a></li>
+                            <li><a href="">40</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="instructions">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Инструкции к сборке</h2>
+                        </div>
+                        <div class="col m7 s12">
+                            <p>Полную инструкцию Вы можете посмотреть на видео, представленном рядом, либо скачав соответствующий PDF файл, щелкнув по ссылке, представленной ниже. Для просмотра файлов формата PDF Вы можете поспользоваться такими программами, как Adobe Reader или FoxIt Reader</p>
+                        </div>
+                        <div class="col m5 s12">
+                            <video controls class="responsive-video">
+                                <source type="video/mp4" src="">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

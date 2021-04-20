@@ -1,0 +1,14 @@
+#delivery{
+
+    & .circle-image{
+        padding-top: 80%;
+        border: 3px solid $primary-color;
+        width: 80%;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70%;
+
+    }
+}

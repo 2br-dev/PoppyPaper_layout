@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html')
+</head>
+<body>
+    <header>
+        @@include('./parts/nav.html')
+    </header>
+    @@include('./parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="main">
+            @@include('./parts/hero.html')
+            <section id="catalog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <h1>Каталог продукции</h1>
+                        </div>
+                    </div>
+                    <div class="row flex">
+                        @@loop('./parts/product-card.html', './data/products.json')
+                    </div>
+                    <div class="col s12 center-align">
+                        <a href="/catalog.html" class="btn">Перейти в каталог</a>
+                    </div>
+                </div>
+            </section>
+            <section id="howto">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2 class="center">Как заказать?</h2>
+                        </div>
+                        <div class="col m6 s12">
+                            <div class="howto-block">
+                                <div class="number-wrapper">
+                                    <div class="number">1</div>
+                                </div>
+                                <div class="text">Добавьте понравившиеся конструкторы в корзину и нажмите «оформить заказ». Если у вас есть промо-код, введите его в соответствующем поле.</div>
+                            </div>
+                            <div class="howto-block">
+                                <div class="number-wrapper">
+                                    <div class="number">2</div>
+                                </div>
+                                <div class="text">В появившемся окне введите ваши данные для доставки. Будьте внимательны при указании ФИО, адреса и номер телефона.</div>
+                            </div>
+                            <div class="howto-block">
+                                <div class="number-wrapper">
+                                    <div class="number">3</div>
+                                </div>
+                                <div class="text">Сайт автоматически рассчитает оптимальные варианты доставки по цене и срокам. Выберете подходящий Вам вариант и нажмите «далее».</div>
+                            </div>
+                        </div>
+                        <div class="col m6 s12">
+                            <div class="howto-block">
+                                <div class="number-wrapper">
+                                    <div class="number">4</div>
+                                </div>
+                                <div class="text">Оплатите заказ с доставкой онлайн, воспользовавшись страницей платежной системы. При желании вы можете получить квитанцию платежа на электронную почту.</div>
+                            </div>
+                            <div class="howto-block">
+                                <div class="number-wrapper">
+                                    <div class="number">5</div>
+                                </div>
+                                <div class="text">После оплаты на почту\телефон Вам придет письмо с номером заказа. Вы сможете задать любой вопрос по вашему заказу используя номер.</div>
+                            </div>
+                            <div class="howto-block">
+                                <div class="number-wrapper">
+                                    <div class="number">6</div>
+                                </div>
+                                <div class="text">В течение двух-трех дней на почту или телефон (в зависимости от указанных Вами данных) придет письмо с трек-номером для отслеживания заказа.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="instructions">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Инструкции к сборке</h2>
+                        </div>
+                        <div class="col m7 s12">
+                            <p>Полную инструкцию Вы можете посмотреть на видео, представленном рядом, либо скачав соответствующий PDF файл, щелкнув по ссылке, представленной ниже. Для просмотра файлов формата PDF Вы можете поспользоваться такими программами, как Adobe Reader или FoxIt Reader</p>
+                        </div>
+                        <div class="col m5 s12">
+                            <video controls class="responsive-video">
+                                <source type="video/mp4" src="">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

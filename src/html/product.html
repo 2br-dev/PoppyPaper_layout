@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html')
+</head>
+<body>
+    <header>
+        @@include('./parts/nav.html')
+    </header>
+    @@include('./parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="product">
+            <section id="catalog">
+                <div class="container">
+                    <div class="row flex">
+                        <div class="col xl4 l5 m6 s12">
+                            <div class="lazy product-image" data-src="/img/products/batman.jpg"></div>
+                        </div>
+                        <div class="col xl5 l7 m6 s12">
+                            <h1>Batman</h1>
+                            <p>
+                                3-D конструктор состоит из вырезанных пробиговынных деталей. Все детали пронумерованы в последовательность 
+                                сборки. В комплекте клей и линейка для удобства сгибания линий, а также подробная печатная инструкция 
+                                и видео-инструкция. Вес набора 250г. Размер: 55х26х15 см
+                            </p>
+                            <p class="price">2700 ₽</p>
+                            <a href="" class="btn">
+                                <i class="mdi mdi-cart-plus"></i>
+                                <span>В корзину</span>
+                            </a>
+                            <a href="" class="btn">
+                                <i class="mdi mdi-cart"></i>
+                                <span>Оформить заказ</span>
+                            </a>
+                            <div class="share-icons">
+                                <a href="" class="share-icon grey-text"><i class="mdi mdi-vk"></i></a>
+                                <a href="" class="share-icon grey-text"><i class="mdi mdi-facebook"></i></a>
+                                <a href="" class="share-icon grey-text"><i class="mdi mdi-odnoklassniki"></i></a>
+                                <a href="" class="share-icon grey-text"><i class="mdi mdi-instagram"></i></a>
+                            </div>
+                            <div class="swiper-container" id="product-gallery">
+                                <div class="swiper-wrapper">
+                                    @@loop('./parts/gallery-image.html', './data/products-catalog.json')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="similar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2 class="center">Вам также могут понравиться</h2>
+                        </div>
+                        <div class="col s12">
+                            <div class="swiper-container" id="similar">
+                                <div class="swiper-wrapper">
+                                    @@loop('./parts/swiper-slide.html', './data/products-catalog.json')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="instructions">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Инструкции к сборке</h2>
+                        </div>
+                        <div class="col m7 s12">
+                            <p>Полную инструкцию Вы можете посмотреть на видео, представленном рядом, либо скачав соответствующий PDF файл, щелкнув по ссылке, представленной ниже. Для просмотра файлов формата PDF Вы можете поспользоваться такими программами, как Adobe Reader или FoxIt Reader</p>
+                        </div>
+                        <div class="col m5 s12">
+                            <video controls class="responsive-video">
+                                <source type="video/mp4" src="">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

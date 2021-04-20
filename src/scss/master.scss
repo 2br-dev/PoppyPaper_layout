@@ -1,0 +1,15 @@
+//= Frameworks ============================
+@import "./framework/materialize";
+@import "./framework/swiper_bundle";
+
+//= Custom parts ==========================
+@import "./parts/vars";
+@import "./parts/custom_grid";
+@import "./parts/helpers";
+@import "./parts/nav";
+@import "./parts/footer";
+
+//= Entire pages ==========================
+@import "./pages/main";
+@import "./pages/delivery";
+@import "./pages/product";

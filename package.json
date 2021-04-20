@@ -1,0 +1,31 @@
+{
+  "name": "poppy-layout",
+  "version": "1.0.0",
+  "description": "Poppy paper layout",
+  "main": "index.html",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-order": "^1.2.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "devDependencies": {
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0"
+  },
+  "scripts": {
+    "start": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2br-dev/Akva_south.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2br-dev/Akva_south/issues"
+  },
+  "homepage": "https://github.com/2br-dev/Akva_south#readme"
+}
