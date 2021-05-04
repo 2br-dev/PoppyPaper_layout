@@ -1,0 +1,54 @@
+// Tables
+table,
+th,
+td {
+    border: none;
+}
+
+table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    &.striped {
+        tr {
+            border-bottom: none;
+        }
+
+        >tbody {
+            >tr:nth-child(odd) {
+                background-color: $table-striped-color;
+            }
+
+            >tr>td {
+                border-radius: 0;
+            }
+        }
+    }
+
+    &.highlight>tbody>tr {
+        transition: background-color .25s ease;
+
+        &:hover {
+            background-color: $table-striped-color;
+        }
+    }
+
+    &.centered {
+
+        thead tr th,
+        tbody tr td {
+            text-align: center;
+        }
+    }
+}
+
+td,
+th {
+    padding: 0 15px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}

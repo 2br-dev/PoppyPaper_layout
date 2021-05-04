@@ -8,8 +8,13 @@
 @import "./parts/helpers";
 @import "./parts/nav";
 @import "./parts/footer";
+@import "./parts/inputs";
+@import "./parts/tables";
 
 //= Entire pages ==========================
 @import "./pages/main";
 @import "./pages/delivery";
 @import "./pages/product";
+@import "./pages/checkout";
+@import "./pages/account";
+@import "./pages/complete";

@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>    <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Document</title>
 <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 <link rel="stylesheet" href="/css/master.css">
@@ -32,7 +30,16 @@
             <input type="text" placeholder="Поиск">
         </div>
     </div>
-    <a href="/account.html" class="profile-link"><i class="mdi mdi-account-circle"></i></a>
+    <div class="profile-link-wrapper">
+        <a class="profile-link">
+            <i class="mdi mdi-account-circle"></i>
+        </a>
+        <ul class="profile-menu">
+            <li><a href="/account.html">Профиль</a></li>
+            <li><a class="modal-trigger" href="#login">Авторизация</a></li>
+        </ul>
+    </div>
+    
     <a href="" class="burger sidenav-trigger" data-target="mobile-menu"><i class="mdi mdi-menu"></i></a>
 </nav>
     </header>
@@ -66,13 +73,90 @@
                                 и видео-инструкция. Вес набора 250г. Размер: 55х26х15 см
                             </p>
                             <p class="price">2700 ₽</p>
+                            <div class="assemble-wrapper">
+
+                                <div class="assemble">
+                                    <div class="counter">
+                                        <div class="dropdown-container">
+                                            <div class="current">XS (42-44)</div>
+                                            <div class="label">Размеры</div>
+                                            <ul class="popup">
+                                                <li><a href="">XS (42-44)</a></li>
+                                                <li><a href="">S (44-46)</a></li>
+                                                <li><a href="">M (46-48)</a></li>
+                                                <li><a href="">L (48-50)</a></li>
+                                                <li><a href="">XL (50-52)</a></li>
+                                                <li><a href="">XXL (52-54)</a></li>
+                                                <li><a href="">3XL (56-58)</a></li>
+                                                <li><a href="">4XL (60-62)</a></li>
+                                                <li><a href="">5XL (64-66)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>									
+                                    <div class="color-selector">
+                                        <div class="colors-wrapper">
+                                            <div class="color">
+    <input type="radio" name="color" id="color-1">
+    <label for="color-1" title="Черный" style="background-color: #000000;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-2">
+    <label for="color-2" title="Черный2" style="background-color: #030303;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-3">
+    <label for="color-3" title="Темно-синий" style="background-color: #1E2535;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-4">
+    <label for="color-4" title="Темно-синий2" style="background-color: #17223A;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-5">
+    <label for="color-5" title="Синий" style="background-color: #103577;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-6">
+    <label for="color-6" title="Синий2" style="background-color: #1A3987;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-7">
+    <label for="color-7" title="Джинсовый" style="background-color: #275982;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-8">
+    <label for="color-8" title="Джинсовый2" style="background-color: #065387;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-9">
+    <label for="color-9" title="Голубой" style="background-color: #1F66CC;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-10">
+    <label for="color-10" title="Светло-голубой" style="background-color: #91D5E5;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-11">
+    <label for="color-11" title="Светло-голубой2" style="background-color: #73D0E0;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-12">
+    <label for="color-12" title="Ментоловый" style="background-color: #91E2C7;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-13">
+    <label for="color-13" title="Ментоловый2" style="background-color: #83EAC5;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-14">
+    <label for="color-14" title="Салатовый" style="background-color: #8DD875;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-15">
+    <label for="color-15" title="Салатовый2" style="background-color: #70CC4E;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-16">
+    <label for="color-16" title="Зеленый" style="background-color: #2EA358;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-17">
+    <label for="color-17" title="Темно-зеленый" style="background-color: #2A3F30;"></label>
+</div><div class="color">
+    <input type="radio" name="color" id="color-18">
+    <label for="color-18" title="Темно-зеленый2" style="background-color: #314436;"></label>
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <a href="" class="btn">
                                 <i class="mdi mdi-cart-plus"></i>
                                 <span>В корзину</span>
-                            </a>
-                            <a href="" class="btn">
-                                <i class="mdi mdi-cart"></i>
-                                <span>Оформить заказ</span>
                             </a>
                             <div class="share-icons">
                                 <a href="" class="share-icon grey-text"><i class="mdi mdi-vk"></i></a>
@@ -439,6 +523,29 @@
         </div>
     </div>
 </footer>
+<div class="modal" id="login">
+    <div class="modal-content">
+        <h3 class="modal-header">Авторизация</h3>
+        <div class="input-field">
+            <input type="text" class="styled" placeholder="Логин">
+            <div class="error">Пользователь не найден</div>
+            <label for="">Логин</label>
+        </div>
+        <div class="input-field">
+            <input type="password" class="styled" placeholder="Пароль">
+            <div class="error">Пароль не должен быть пустым</div>
+            <label for="">Пароль</label>
+        </div>
+        <div class="input-field-check">
+            <input type="checkbox" id="remember" class="styled">
+            <label for="remember">Запомнить меня</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat left modal-close">Закрыть</a>
+        <a class="btn btn-flat">Войти</a>
+    </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="/js/master.js"></script>
 </body>

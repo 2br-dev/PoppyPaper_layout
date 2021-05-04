@@ -153,17 +153,52 @@ header{
 
         }
 
-        & .profile-link{
-            background-color: $primary-color;
-            color: #fff;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
+        & .profile-link-wrapper{
 
-            & i{
-                font-size: 21px !important;
-                line-height: 50px;
+            position: relative;
+
+            & .profile-link{
+                background-color: $primary-color;
+                color: #fff;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+    
+                & i{
+                    font-size: 21px !important;
+                    line-height: 50px;
+                }
+            }
+
+            & .profile-menu{
+                position: absolute;
+                right: 0;
+                flex-direction: column;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity .4s, transform .4s;
+                box-shadow: 0 2px 6px rgba(black, .4);
+                border-radius: 4px;
+                overflow: hidden;
+                pointer-events: none;
+
+                & li{
+                    display: block;
+
+                    & a{
+                        display: block;
+                    }
+                }
+            }
+
+            &:hover{
+                & .profile-menu{
+                    pointer-events: all;
+                    opacity: 1;
+                    transform: none;
+                }
             }
         }
+
 
         & .burger{
             

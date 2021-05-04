@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>    <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Document</title>
 <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 <link rel="stylesheet" href="/css/master.css">
@@ -32,7 +30,16 @@
             <input type="text" placeholder="Поиск">
         </div>
     </div>
-    <a href="/account.html" class="profile-link"><i class="mdi mdi-account-circle"></i></a>
+    <div class="profile-link-wrapper">
+        <a class="profile-link">
+            <i class="mdi mdi-account-circle"></i>
+        </a>
+        <ul class="profile-menu">
+            <li><a href="/account.html">Профиль</a></li>
+            <li><a class="modal-trigger" href="#login">Авторизация</a></li>
+        </ul>
+    </div>
+    
     <a href="" class="burger sidenav-trigger" data-target="mobile-menu"><i class="mdi mdi-menu"></i></a>
 </nav>
     </header>
@@ -377,6 +384,29 @@
         </div>
     </div>
 </footer>
+<div class="modal" id="login">
+    <div class="modal-content">
+        <h3 class="modal-header">Авторизация</h3>
+        <div class="input-field">
+            <input type="text" class="styled" placeholder="Логин">
+            <div class="error">Пользователь не найден</div>
+            <label for="">Логин</label>
+        </div>
+        <div class="input-field">
+            <input type="password" class="styled" placeholder="Пароль">
+            <div class="error">Пароль не должен быть пустым</div>
+            <label for="">Пароль</label>
+        </div>
+        <div class="input-field-check">
+            <input type="checkbox" id="remember" class="styled">
+            <label for="remember">Запомнить меня</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat left modal-close">Закрыть</a>
+        <a class="btn btn-flat">Войти</a>
+    </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="/js/master.js"></script>
 </body>

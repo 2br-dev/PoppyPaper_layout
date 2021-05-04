@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="/css/master.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+    <a href="/" class="logo">POPPY.PAPER</a>
+    <ul>
+        <li><a href="/about.html">О нас</a></li>
+<li><a href="/catalog.html">Каталог</a></li>
+<li><a href="/delivery.html">Доставка и оплата</a></li>
+<li><a href="/events.html">Акции и скидки</a></li>
+<li><a href="/contacts.html">Контакты</a></li>
+    </ul>
+    <div class="right">
+        <a href="/checkout.html" class="cart-link">
+            <span class="icon"><i class="mdi mdi-cart"></i></span>
+            <span class="word">Корзина</span>
+            <span class="count">1<span class="price"> / 2000₽</span></span>
+        </a>
+        <div class="form">
+            <i class="mdi mdi-magnify"></i>
+            <input type="text" placeholder="Поиск">
+        </div>
+    </div>
+    <div class="profile-link-wrapper">
+        <a class="profile-link">
+            <i class="mdi mdi-account-circle"></i>
+        </a>
+        <ul class="profile-menu">
+            <li><a href="/account.html">Профиль</a></li>
+            <li><a class="modal-trigger" href="#login">Авторизация</a></li>
+        </ul>
+    </div>
+    
+    <a href="" class="burger sidenav-trigger" data-target="mobile-menu"><i class="mdi mdi-menu"></i></a>
+</nav>
+    </header>
+    <main class="global-wrapper" id="account">
+        <div class="container">
+            <h1>Личный кабинет</h1>
+            <ul class="tabs">
+                <li class="tab"><a href="#profile">Профиль</a></li>
+                <li class="tab"><a href="#history">История заказов</a></li>
+            </ul>
+            <form action="" id="profile">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h2>Общие сведения</h2>
+                    </div>
+                    <div class="col l4 offset-l4 m6 offset-m3 s12">
+                        <div class="input-field">
+                            <input class="styled" type="text" placeholder="Имя">
+                            <label for="">Имя</label>
+                        </div>
+                        <div class="input-field">
+                            <input class="styled" type="text" placeholder="Фамилия">
+                            <label for="">Фамилия</label>
+                        </div>
+                        <div class="input-field">
+                            <input class="styled" type="text" placeholder="Email">
+                            <label for="">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input class="styled" type="text" placeholder="Телефон">
+                            <label for="">Телефон</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h2>Безопасность</h2>
+                    </div>
+                    <div class="col l4 offset-l4 m6 offset-m3 s12">
+                        <div class="input-field-check">
+                            <input type="checkbox" class="styled toggle-group"
+                                data-target="security" id="change_pass"><label for="change_pass">Изменить
+                                пароль</label></div>
+                        <div class="input-field" data-group="security">
+                            <input class="styled" type="password" placeholder="Старый пароль">
+                            <label for="">Старый пароль</label>
+                        </div>
+                        <div class="input-field" data-group="security">
+                            <input class="styled" type="password" placeholder="Новый пароль">
+                            <label for="">Новый пароль</label>
+                        </div>
+                        <div class="input-field" data-group="security">
+                            <input class="styled" type="password" placeholder="Подтвердить пароль">
+                            <label for="">Подтвердить пароль</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h2>Для юридических лиц</h2>
+                    </div>
+                    <div class="col l4 offset-l4 m6 offset-m3 s12">
+                        <div class="input-field-check">
+                            <input type="checkbox" id="law_face" class="styled toggle-group" data-target="law-face">
+                            <label for="law_face">Юридическое лицо</label>
+                        </div>
+                        <div class="input-field" data-group="law-face">
+                            <input class="styled" type="text" placeholder="Наименование организации">
+                            <span class="error-holder"></span>
+                            <label for="">Наименование организации</label>
+                        </div>
+                        <div class="input-field" data-group="law-face">
+                            <input class="styled" type="text" placeholder="Номер налогоплательщика (ИНН)">
+                            <label for="">Номер налогоплательщика (ИНН)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l4 offset-l4 m6 offset-m3 s12">
+                        <a href="" class="btn accent">Сохранить</a>
+                        <a href="" class="btn accent outlined">Сбросить</a>
+                    </div>
+                </div>
+            </form>
+            <div id="history">
+                <table class="history">
+                    <thead>
+                        <th>№</th>
+                        <th>Дата</th>
+                        <th>Сумма</th>
+                        <th class="hide-on-mobile">Статус</th>
+                        <th>Счет</th>
+                        <th class="hide-on-mobile">Оплата</th>
+                        <th class="hide-on-mobile">Доставка</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>23.02.2020</td>
+                            <td>1 200₽</td>
+                            <td class="hide-on-mobile">Обрабатывается</td>
+                            <td>
+                                <a
+                                    href="https://docs.google.com/spreadsheets/d/129f3lrKgdAE5NQOGxR0eSC7DnztZYuy56uOExpeweH0/edit#gid=712599601"><i
+                                        class="mdi mdi-file"></i></a>
+                            </td>
+                            <td class="hide-on-mobile">Онлайн</td>
+                            <td class="hide-on-mobile">Курьером</td>
+                            <td>
+                                <ul class="actions-wrapper">
+                                    <li class="actions-trigger">
+                                        <a href="javascript:void(0)"><i class="mdi mdi-dots-vertical"></i></a>
+                                        <ul class="actions">
+                                            <li><a href="">Отменить</a></li>
+                                            <li><a href="">Изменить оплату</a></li>
+                                            <li><a href="">Оплатить</a></li>
+                                            <li><a href="">Повторить</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div class="subtable-wrapper">
+                                    <table class="subtable">
+                                        <thead>
+                                            <th>Наименование</th>
+                                            <th>Кол-во</th>
+                                            <th>Цена/ед</th>
+                                            <th>Общая цена</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Длинное наименование продукции</td>
+                                                <td>1</td>
+                                                <td>1 000₽</td>
+                                                <td>1 000₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Вода</td>
+                                                <td>1</td>
+                                                <td>10₽</td>
+                                                <td>10₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Длинное наименование продукции</td>
+                                                <td>1</td>
+                                                <td>1 000₽</td>
+                                                <td>1 000₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Вода</td>
+                                                <td>1</td>
+                                                <td>10₽</td>
+                                                <td>10₽</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>23.02.2020</td>
+                            <td>1 200₽</td>
+                            <td class="hide-on-mobile">Обрабатывается</td>
+                            <td>
+                                <a
+                                    href="https://docs.google.com/spreadsheets/d/129f3lrKgdAE5NQOGxR0eSC7DnztZYuy56uOExpeweH0/edit#gid=712599601"><i
+                                        class="mdi mdi-file"></i></a>
+                            </td>
+                            <td class="hide-on-mobile">Онлайн</td>
+                            <td class="hide-on-mobile">Курьером</td>
+                            <td>
+                                <ul class="actions-wrapper">
+                                    <li class="actions-trigger">
+                                        <a href="javascript:void(0)"><i class="mdi mdi-dots-vertical"></i></a>
+                                        <ul class="actions">
+                                            <li><a href="">Отменить</a></li>
+                                            <li><a href="">Изменить оплату</a></li>
+                                            <li><a href="">Оплатить</a></li>
+                                            <li><a href="">Повторить</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div class="subtable-wrapper">
+                                    <table class="subtable">
+                                        <thead>
+                                            <th>Наименование</th>
+                                            <th>Кол-во</th>
+                                            <th>Цена/ед</th>
+                                            <th>Общая цена</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Длинное наименование продукции</td>
+                                                <td>1</td>
+                                                <td>1 000₽</td>
+                                                <td>1 000₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Вода</td>
+                                                <td>1</td>
+                                                <td>10₽</td>
+                                                <td>10₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Длинное наименование продукции</td>
+                                                <td>1</td>
+                                                <td>1 000₽</td>
+                                                <td>1 000₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Вода</td>
+                                                <td>1</td>
+                                                <td>10₽</td>
+                                                <td>10₽</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>23.02.2020</td>
+                            <td>1 200₽</td>
+                            <td class="hide-on-mobile">Обрабатывается</td>
+                            <td>
+                                <a
+                                    href="https://docs.google.com/spreadsheets/d/129f3lrKgdAE5NQOGxR0eSC7DnztZYuy56uOExpeweH0/edit#gid=712599601"><i
+                                        class="mdi mdi-file"></i></a>
+                            </td>
+                            <td class="hide-on-mobile">Онлайн</td>
+                            <td class="hide-on-mobile">Курьером</td>
+                            <td>
+                                <ul class="actions-wrapper">
+                                    <li class="actions-trigger">
+                                        <a href="javascript:void(0)"><i class="mdi mdi-dots-vertical"></i></a>
+                                        <ul class="actions">
+                                            <li><a href="">Отменить</a></li>
+                                            <li><a href="">Изменить оплату</a></li>
+                                            <li><a href="">Оплатить</a></li>
+                                            <li><a href="">Повторить</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div class="subtable-wrapper">
+                                    <table class="subtable">
+                                        <thead>
+                                            <th>Наименование</th>
+                                            <th>Кол-во</th>
+                                            <th>Цена/ед</th>
+                                            <th>Общая цена</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Длинное наименование продукции</td>
+                                                <td>1</td>
+                                                <td>1 000₽</td>
+                                                <td>1 000₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Вода</td>
+                                                <td>1</td>
+                                                <td>10₽</td>
+                                                <td>10₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Длинное наименование продукции</td>
+                                                <td>1</td>
+                                                <td>1 000₽</td>
+                                                <td>1 000₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Вода</td>
+                                                <td>1</td>
+                                                <td>10₽</td>
+                                                <td>10₽</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>23.02.2020</td>
+                            <td>1 200₽</td>
+                            <td class="hide-on-mobile">Обрабатывается</td>
+                            <td>
+                                <a
+                                    href="https://docs.google.com/spreadsheets/d/129f3lrKgdAE5NQOGxR0eSC7DnztZYuy56uOExpeweH0/edit#gid=712599601"><i
+                                        class="mdi mdi-file"></i></a>
+                            </td>
+                            <td class="hide-on-mobile">Онлайн</td>
+                            <td class="hide-on-mobile">Курьером</td>
+                            <td>
+                                <ul class="actions-wrapper">
+                                    <li class="actions-trigger">
+                                        <a href="javascript:void(0)"><i class="mdi mdi-dots-vertical"></i></a>
+                                        <ul class="actions">
+                                            <li><a href="">Отменить</a></li>
+                                            <li><a href="">Изменить оплату</a></li>
+                                            <li><a href="">Оплатить</a></li>
+                                            <li><a href="">Повторить</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div class="subtable-wrapper">
+                                    <table class="subtable">
+                                        <thead>
+                                            <th>Наименование</th>
+                                            <th>Кол-во</th>
+                                            <th>Цена/ед</th>
+                                            <th>Общая цена</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Длинное наименование продукции</td>
+                                                <td>1</td>
+                                                <td>1 000₽</td>
+                                                <td>1 000₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Вода</td>
+                                                <td>1</td>
+                                                <td>10₽</td>
+                                                <td>10₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Длинное наименование продукции</td>
+                                                <td>1</td>
+                                                <td>1 000₽</td>
+                                                <td>1 000₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Вода</td>
+                                                <td>1</td>
+                                                <td>10₽</td>
+                                                <td>10₽</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <ul class="sidenav" id="mobile-menu">
+    <li class="search-field">
+        <form action="">
+            <i class="mdi mdi-magnify"></i>
+            <input type="text" placeholder="Поиск" />
+        </form>
+        <a href="" class="sidenav-close"><i class="mdi mdi-close"></i></a>
+    </li>
+    <li><a href="/about.html">О нас</a></li>
+<li><a href="/catalog.html">Каталог</a></li>
+<li><a href="/delivery.html">Доставка и оплата</a></li>
+<li><a href="/events.html">Акции и скидки</a></li>
+<li><a href="/contacts.html">Контакты</a></li>
+</ul>
+    <footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l2 m4 s12">
+                <div class="footer-header">Навигация</div>
+                <ul>
+                    <li><a href="">О нас</a></li>
+                    <li><a href="">Каталог</a></li>
+                    <li><a href="">Доставка и оплата</a></li>
+                    <li><a href="">Акции и скидки</a></li>
+                    <li><a href="">Инструкции по сборке</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col l4 m8 s12">
+                <div class="footer-header">Обратная связь</div>
+                <p>
+                    Вы можете связаться с нами, воспользовавшись онлайн-помощником, или с помощью формы обратной связи спрва от этого текста – мы постараемся Вам ответить максимально оперативно. 
+                </p>
+                <p>
+                    Пожалуйста, имейте в Виду, что используя представленные способы связи, вы даёте своё согласие на обработку персональных данных согласно Федеральному закону «Об обработке персональных данных» и Политике конфиденциальности
+                </p>
+            </div>
+            <div class="col l6 m12 s12">
+                <div class="footer-header">Написать сообщение</div>
+                <div class="row">
+                    <p>
+                        <div class="col m5 s12"><input type="text" placeholder="Имя, Фамилия"></div>
+                        <div class="col m7 s12"><input type="text" placeholder="Тема сообщения"></div>
+                        <div class="col s12"><textarea name="" id="" cols="30" rows="10" placeholder="Текст сообщения"></textarea></div>
+                        <div class="col s12 right-align"><a href="" class="footer-button">Отправить</a></div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <span>© 2021, Все права защищены</span>
+            <span class="right">Политика конфиденциальности</span>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="login">
+    <div class="modal-content">
+        <h3 class="modal-header">Авторизация</h3>
+        <div class="input-field">
+            <input type="text" class="styled" placeholder="Логин">
+            <div class="error">Пользователь не найден</div>
+            <label for="">Логин</label>
+        </div>
+        <div class="input-field">
+            <input type="password" class="styled" placeholder="Пароль">
+            <div class="error">Пароль не должен быть пустым</div>
+            <label for="">Пароль</label>
+        </div>
+        <div class="input-field-check">
+            <input type="checkbox" id="remember" class="styled">
+            <label for="remember">Запомнить меня</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat left modal-close">Закрыть</a>
+        <a class="btn btn-flat">Войти</a>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/master.js"></script>
+</body>
+
+</html>

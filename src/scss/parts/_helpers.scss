@@ -7,9 +7,149 @@ body{
         flex-grow: 1;
     }
 
+    & a{
+        cursor: pointer;
+    }
+
     & video{
         width: 100%;
         height: auto;
+    }
+
+    & .modal{
+
+        & .input-field{
+            width: 100%;
+            
+            & textarea,
+            & input{
+                
+                &:not(:placeholder-shown), &:focus{
+    
+                    & ~ label{
+                        background-color: #fafafa;
+                    }
+                }
+            }
+        }
+    }
+
+    & .add-cart{
+
+		display: inline-flex;
+
+		& .minus, & .plus{
+			line-height: 30px;
+			padding: 0 12px;
+            cursor: pointer;
+		}
+
+		& input{
+			width: 30px;
+			text-align: center;
+			background-color: transparent;
+			border: 0;
+		}
+	}
+
+    & input[type="number"]{
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    .hidden{
+        display: none;
+        pointer-events: none;
+    }
+
+    .dropdown-container{
+
+        position: relative;
+        min-height: 40px;
+    
+        & .current{
+            line-height: 50px;
+            min-height: 50px;
+            padding-top: 10px;
+            border-bottom: 1px solid black;
+            font-size: 24px;
+            cursor: pointer;
+            white-space: nowrap;
+            user-select: none;
+            padding-right: 16px;
+            background: url(../img/dropdown-arrow.svg) right bottom 20px no-repeat;
+    
+            & + .label{
+                position: absolute;
+                top: 0;
+                font-size: 12px;
+                pointer-events: none;
+                transition: font-size .2s, top .2s;
+            }
+    
+            &:empty + .label{
+                font-size: 16px;
+                top: 26px;
+            }
+        }
+    
+        & .popup{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            min-width: fit-content;
+            z-index: 20;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(black, .4);
+            left: 0;
+            top: 100%;
+            max-height: 216px;
+            overflow: auto;
+            transition: transform .2s, opacity .2s;
+            pointer-events: none;
+            transform: translateY(-10px);
+            opacity: 0;
+
+            &::-webkit-scrollbar{
+                width: 8px;
+                background: #d3d3d3;
+                border-end-end-radius: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb{
+                background: #fff;
+                box-shadow: 0 0 0 2px #d3d3d3 inset;
+            }
+
+            
+    
+            &.open{
+                transform: none;
+                opacity: 1;
+                pointer-events: all;
+            }
+    
+            & li{
+                list-style: none;
+                
+                & a{
+                    line-height: 36px;
+                    min-height: 36px;
+                    padding: 0 10px;
+                    display: block;
+    
+                    &:hover{
+                        background-color: #ececec;
+                    }
+                }
+            }
+        }
     }
 
     h1{
@@ -92,7 +232,7 @@ body{
         & .price{
             color: $primary-color;
             font-weight: 700;
-    
+            font-size: 21px;
         }
     }
     
@@ -122,6 +262,19 @@ body{
         & span{
             display: inline-block;
             transform: translateY(-2px);
+        }
+    }
+
+    & .modal{
+
+        &#login{
+            width: 300px;
+
+            & .modal-header{
+                font-size: 24px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
         }
     }
 }

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    <header>
+        <nav>
+    <a href="/" class="logo">POPPY.PAPER</a>
+    <ul>
+        <li><a href="/about.html">О нас</a></li>
+<li><a href="/catalog.html">Каталог</a></li>
+<li><a href="/delivery.html">Доставка и оплата</a></li>
+<li><a href="/events.html">Акции и скидки</a></li>
+<li><a href="/contacts.html">Контакты</a></li>
+    </ul>
+    <div class="right">
+        <a href="/checkout.html" class="cart-link">
+            <span class="icon"><i class="mdi mdi-cart"></i></span>
+            <span class="word">Корзина</span>
+            <span class="count">1<span class="price"> / 2000₽</span></span>
+        </a>
+        <div class="form">
+            <i class="mdi mdi-magnify"></i>
+            <input type="text" placeholder="Поиск">
+        </div>
+    </div>
+    <div class="profile-link-wrapper">
+        <a class="profile-link">
+            <i class="mdi mdi-account-circle"></i>
+        </a>
+        <ul class="profile-menu">
+            <li><a href="/account.html">Профиль</a></li>
+            <li><a class="modal-trigger" href="#login">Авторизация</a></li>
+        </ul>
+    </div>
+    
+    <a href="" class="burger sidenav-trigger" data-target="mobile-menu"><i class="mdi mdi-menu"></i></a>
+</nav>
+    </header>
+    <div class="global-wrapper" id="checkout-wrapper">
+        <div class="container">
+            <form class="row">
+                <div class="col s12">
+                    <div class="underline-wrapper">
+                        <h1>Корзина</h1>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s12">
+
+                            <div class="underline-wrapper">
+                                <h2>Состав корзины</h2>
+                            </div>
+                            <table class="material-table">
+                                <thead>
+                                    <tr>
+                                        <th>Наименование</th>
+                                        <th>Количество</th>
+                                        <th>Цена за единицу</th>
+                                        <th>Сумма</th>
+                                        <th class="right-align">Действия</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="order">
+                                        <td class="cart-item-title"><a class="underlined" href="product.html">Свитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+                                        <td>
+                                            <div class="add-cart">
+                                                <div class="plus">
+                                                    <a>–</a>
+                                                </div>
+                                                <input type="number" value="1" />
+                                                <div class="minus">
+                                                    <a>+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>120₽</td>
+                                        <td>240₽</td>
+                                        <td class="right-align">
+                                            <a class="mdi mdi-delete"></a>
+                                        </td>
+                                    </tr>
+                                    <tr class="order">
+                                        <td class="cart-item-title"><a class="underlined" href="product.html">Свитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+                                        <td>
+                                            <div class="add-cart">
+                                                <div class="plus">
+                                                    <a>–</a>
+                                                </div>
+                                                <input type="number" value="1" />
+                                                <div class="minus">
+                                                    <a>+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>120₽</td>
+                                        <td>240₽</td>
+                                        <td class="right-align">
+                                            <a class="mdi mdi-delete"></a>
+                                        </td>
+                                    </tr>
+                                    <tr class="order">
+                                        <td class="cart-item-title"><a class="underlined" href="product.html">Свитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+                                        <td>
+                                            <div class="add-cart">
+                                                <div class="plus">
+                                                    <a>–</a>
+                                                </div>
+                                                <input type="number" value="1" />
+                                                <div class="minus">
+                                                    <a>+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>120₽</td>
+                                        <td>240₽</td>
+                                        <td class="right-align">
+                                            <a class="mdi mdi-delete"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="row">
+                <div class="col s12 right-align">
+                    <div>Стоимость: 240₽<span class="delivery-cost"> + 200₽</span></div>
+                    <div class="total">К оплате: <strong>440₽</strong></div>
+                </div>
+                <div class="col l3 m4 s12">
+                    <div class="underline-wrapper">
+                        <h2>Профиль</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col l12 s12">
+                            <div class="input-field">
+                                <input type="text" class="styled" placeholder="Фамилия, Имя, Отчество">
+                                <label for="">Фамилия, Имя, Отчество</label>
+                            </div>
+                        </div>
+                        <div class="col l12 s12">
+                            <div class="input-field">
+                                <input type="text" class="styled" placeholder="E-mail">
+                                <label for="">E-mail</label>
+                            </div>
+                        </div>
+                        <div class="col l12 s12">
+                            <div class="input-field">
+                                <input type="phone" class="styled" placeholder="Телефон">
+                                <label for="">Телефон</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 right-align">
+                            <a href="#login" class="btn modal-trigger">Авторизоваться</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l9 m8 s10">
+                    <div class="underline-wrapper">
+                        <h2>Доставка и оплата</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col l9 m7 s12">
+                            <h3>Вид доставки</h3>
+                            <h3>Адрес</h3>
+                            <div class="delivery-list">
+                                <div class="input-field-check"><input type="radio" class="styled need-address" value="delivery1" name="delivery" checked id="del1"><label for="del1">Самовывоз</label></div>
+                                <div class="input-field-check"><input type="radio" class="styled" value="delivery2" name="delivery" id="del2"><label for="del2">CDEK</label></div>
+                                <div class="input-field-check"><input type="radio" class="styled need-address" value="delivery3" name="delivery" id="del3"><label for="del3">Транспортная компания до терминала</label></div>
+                                <div class="input-field-check"><input type="radio" class="styled" value="delivery4" name="delivery" id="del4"><label for="del4">Курьер</label></div>
+                            </div>
+                            <div class="address-list hidden">
+                                <div class="checkout_changeRegionButton rs-checkout_changeRegionButton">
+                                    <i class="mdi mdi-map-marker"></i>
+                                    <span>Анапа</span>
+                                    <a class="small underlined">изменить</a>
+                                </div>
+                                <div class="input-field-check"><input type="radio" class="styled" value="address1" name="address" checked id="addr1"><label for="addr1">Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206</label></div>
+                                <div class="input-field-check"><input type="radio" class="styled" value="address2" name="address" id="addr2"><label for="addr2">Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г</label></div>
+                                <div class="input-field-check"><input type="radio" class="styled" value="address3" name="address" id="addr3"><label for="addr3">Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9</label></div>
+                                <div class="input-field-check"><input type="radio" class="styled" value="user-address" name="address" id="addr4"><label for="addr4">Другое</label></div>
+                                <div class="input-field hidden" id="user-address">
+                                    <input type="text" class="styled" placeholder="Адрес">
+                                    <label for="">Адрес</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l3 m5 s12">
+                            <h3>Оплата</h3>
+                            <div class="input-field-check"><input checked type="radio" class="styled" name="payment-type" id="pay1"><label for="pay1">Наличными курьеру</label></div>
+                            <div class="input-field-check"><input type="radio" class="styled" name="payment-type" id="pay2"><label for="pay2">Картой онлайн</label></div>
+                            <div class="input-field-check"><input type="radio" class="styled" name="payment-type" id="pay3"><label for="pay3">Оплата по счету</label></div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field">
+                                <textarea placeholder="Комментарий к заказу" name="" id="" cols="30" rows="10" class="styled"></textarea>
+                                <label for="">Комментарий к заказу</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 right-align">
+                            <a class="btn" href="/complete.html">Офомить заказ</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+	<ul class="sidenav" id="mobile-menu">
+    <li class="search-field">
+        <form action="">
+            <i class="mdi mdi-magnify"></i>
+            <input type="text" placeholder="Поиск" />
+        </form>
+        <a href="" class="sidenav-close"><i class="mdi mdi-close"></i></a>
+    </li>
+    <li><a href="/about.html">О нас</a></li>
+<li><a href="/catalog.html">Каталог</a></li>
+<li><a href="/delivery.html">Доставка и оплата</a></li>
+<li><a href="/events.html">Акции и скидки</a></li>
+<li><a href="/contacts.html">Контакты</a></li>
+</ul>
+	<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l2 m4 s12">
+                <div class="footer-header">Навигация</div>
+                <ul>
+                    <li><a href="">О нас</a></li>
+                    <li><a href="">Каталог</a></li>
+                    <li><a href="">Доставка и оплата</a></li>
+                    <li><a href="">Акции и скидки</a></li>
+                    <li><a href="">Инструкции по сборке</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col l4 m8 s12">
+                <div class="footer-header">Обратная связь</div>
+                <p>
+                    Вы можете связаться с нами, воспользовавшись онлайн-помощником, или с помощью формы обратной связи спрва от этого текста – мы постараемся Вам ответить максимально оперативно. 
+                </p>
+                <p>
+                    Пожалуйста, имейте в Виду, что используя представленные способы связи, вы даёте своё согласие на обработку персональных данных согласно Федеральному закону «Об обработке персональных данных» и Политике конфиденциальности
+                </p>
+            </div>
+            <div class="col l6 m12 s12">
+                <div class="footer-header">Написать сообщение</div>
+                <div class="row">
+                    <p>
+                        <div class="col m5 s12"><input type="text" placeholder="Имя, Фамилия"></div>
+                        <div class="col m7 s12"><input type="text" placeholder="Тема сообщения"></div>
+                        <div class="col s12"><textarea name="" id="" cols="30" rows="10" placeholder="Текст сообщения"></textarea></div>
+                        <div class="col s12 right-align"><a href="" class="footer-button">Отправить</a></div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <span>© 2021, Все права защищены</span>
+            <span class="right">Политика конфиденциальности</span>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="login">
+    <div class="modal-content">
+        <h3 class="modal-header">Авторизация</h3>
+        <div class="input-field">
+            <input type="text" class="styled" placeholder="Логин">
+            <div class="error">Пользователь не найден</div>
+            <label for="">Логин</label>
+        </div>
+        <div class="input-field">
+            <input type="password" class="styled" placeholder="Пароль">
+            <div class="error">Пароль не должен быть пустым</div>
+            <label for="">Пароль</label>
+        </div>
+        <div class="input-field-check">
+            <input type="checkbox" id="remember" class="styled">
+            <label for="remember">Запомнить меня</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat left modal-close">Закрыть</a>
+        <a class="btn btn-flat">Войти</a>
+    </div>
+</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/master.js"></script>
+</body>
+</html>

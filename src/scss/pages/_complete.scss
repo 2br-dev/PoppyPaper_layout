@@ -1,0 +1,16 @@
+#checkout-wrapper{
+
+    & .t-order_table{
+
+        & tr{
+
+            & td{
+                border-radius: 0;
+            }
+
+            &:nth-child(odd){
+                background: #f7f7f7;
+            }
+        }
+    }
+}
