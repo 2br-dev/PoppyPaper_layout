@@ -4804,7 +4804,10 @@ body {
     font-weight: 700; }
   body .product {
     text-align: center;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    display: flex;
+    height: calc(100% - 20px);
+    flex-direction: column; }
     body .product .photo {
       padding-top: 100%;
       background-size: cover;
@@ -4845,6 +4848,8 @@ body {
       font-size: 24px;
       font-weight: 700;
       line-height: 27px; }
+    body .product .separator {
+      flex-grow: 1; }
     body .product .price {
       color: #ee6e73;
       font-weight: 700;
@@ -4873,6 +4878,8 @@ body {
       font-size: 24px;
       text-transform: uppercase;
       font-weight: 700; }
+  body .swiper-slide {
+    height: auto; }
 
 header {
   position: relative;
@@ -5253,6 +5260,69 @@ th {
 
 #main #catalog {
   padding-bottom: 50px; }
+  #main #catalog .filters {
+    display: flex; }
+    #main #catalog .filters .filters-block {
+      margin-right: 20px;
+      position: relative; }
+      #main #catalog .filters .filters-block .current {
+        display: flex;
+        line-height: 37px;
+        padding: 0 5px;
+        background: #efefef;
+        border-radius: 4px;
+        cursor: pointer; }
+        #main #catalog .filters .filters-block .current .key {
+          padding: 0 5px; }
+        #main #catalog .filters .filters-block .current .value {
+          padding: 0 5px;
+          color: #ee6e73; }
+        #main #catalog .filters .filters-block .current .reset-wrapper {
+          padding: 0 5px; }
+          #main #catalog .filters .filters-block .current .reset-wrapper .reset-filter {
+            color: #777; }
+      #main #catalog .filters .filters-block .values {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+        overflow: hidden;
+        min-width: 100%;
+        margin: 0;
+        position: absolute;
+        z-index: 20;
+        background: #fff;
+        top: calc(100% - 20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: top .4s, opacity .4s; }
+        #main #catalog .filters .filters-block .values li {
+          transition: background-color .2s; }
+          #main #catalog .filters .filters-block .values li:hover {
+            background: #efefef; }
+          #main #catalog .filters .filters-block .values li input[type="checkbox"] {
+            display: none; }
+            #main #catalog .filters .filters-block .values li input[type="checkbox"] ~ label {
+              cursor: pointer; }
+              #main #catalog .filters .filters-block .values li input[type="checkbox"] ~ label:before {
+                content: '\F012C';
+                font-family: 'Material Design Icons';
+                margin-right: 10px;
+                transition: color .2s;
+                color: transparent; }
+            #main #catalog .filters .filters-block .values li input[type="checkbox"]:checked ~ label:before {
+              color: black; }
+          #main #catalog .filters .filters-block .values li a, #main #catalog .filters .filters-block .values li label {
+            display: block;
+            line-height: 40px;
+            padding: 0 15px; }
+          #main #catalog .filters .filters-block .values li a {
+            transition: background-color .2s, color .2s; }
+            #main #catalog .filters .filters-block .values li a.active {
+              background-color: #ee6e73 !important;
+              color: #fff; }
+      #main #catalog .filters .filters-block:hover .values {
+        pointer-events: all;
+        opacity: 1;
+        top: 100%; }
 
 #main #howto {
   background: url(/img/low-poly-bgr.svg);
@@ -5337,11 +5407,17 @@ th {
     display: block;
     flex-grow: 1; }
 
+#product #videos iframe {
+  max-width: 100%;
+  margin-bottom: 1.5rem; }
+
 #product #product-gallery {
   margin: 50px 0; }
-  #product #product-gallery .gallery-image .lazy {
-    padding-top: 100%;
-    background-size: cover; }
+  #product #product-gallery .gallery-image {
+    cursor: pointer; }
+    #product #product-gallery .gallery-image .lazy {
+      padding-top: 100%;
+      background-size: cover; }
 
 #product .share-icons {
   display: inline-block;

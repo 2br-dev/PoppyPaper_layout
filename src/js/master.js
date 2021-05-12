@@ -16,6 +16,8 @@ var
   tabs,
   gallery;
 
+const PATH = "";
+
 $(() => {
   init();
   $('body').on('click', '#container', nextSlide);
@@ -27,6 +29,10 @@ $(() => {
   $('body').on('change', '.toggle-group', toggleGroup);
   $('body').on('click', '.dropdown-container .current', openDropdown);
 	$('body').on('click', '.dropdown-container .popup a', setCurrent);
+	$('body').on('change', '.filters-block .values input[type=checkbox]', updateFiltersMultiSelect);
+  $('body').on('click', '.filters-block .values a', updateFiltersSelect);
+  $('body').on('reset', '.filters', resetFilters);
+  $('body').on('click', '.reset-filter', resetFilter);
   $('body').on('click', clickOutside);
 });
 
@@ -37,14 +43,14 @@ init = () => {
   sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
 
   if($('#container').length && $('#container-stroke').length){
-    loadScript("/js/shapeshifter.js", () => {
+    loadScript(PATH + "/js/shapeshifter.js", () => {
       initShapeShifter();
     })
   }
 
   if($('#similar').length){
-    loadScript("/js/swiper-bundle.js", () => {
-      similar = new Swiper('#similar', {
+    loadScript(PATH + "/js/swiper-bundle.js", () => {
+      similar = new Swiper('#similar-slider', {
         spaceBetween: 20,
         loop: true,
         breakpoints: {
@@ -67,9 +73,9 @@ init = () => {
             slidesPerView: 6
           }
         }
-      })[0];
-
-      similar.on("slideChange", () => {
+      });
+      
+      similar.on("slideChange", function(){
         $('.lazy').lazy();
       });
 
@@ -89,6 +95,42 @@ init = () => {
   }
 }
 
+
+function resetFilter(){
+  var filter = $(this).parents('.filters-block');
+  var multiselect = filter.hasClass('multiselect');
+
+  if(multiselect){
+    filter.find(':checked').prop('checked', false);
+    filter.find('.current .value').text('0');
+  }else{
+    filter.find('.current input[type="hidden"]').val('');
+    filter.find('.current .value').text('Все');
+    filter.find('.values a').removeClass('active');
+    filter.find('.values li:first-of-type a').addClass('active');
+  }
+}
+function resetFilters(){
+  $('.filters-block .current .value').text('Все');
+  $('.filters-block input[type="hidden"]').val('');
+  $('.filters-block.multiselect .current .value').text('0');
+  $('.filters-block .values li a').removeClass('active');
+  $('.filters-block .values li:first-of-type a').addClass('active');
+}
+function updateFiltersMultiSelect(){
+  var checkedCount = $(this).parents('.values').find(':checked').length;
+  $(this).parents('.filters-block').find('.current .value').text(checkedCount);
+}
+function updateFiltersSelect(){
+  $(this).parents('.filters-block').find('.current .value').text($(this).text());
+  $(this).parents('.filters-block .values').find('a').removeClass('active');
+  $(this).addClass('active');
+  if($(this).text() == 'Все'){
+    $('.filters-block input[type="hidden"]').val('');
+  }else{
+    $('.filters-block input[type="hidden"]').val($(this).text());
+  }
+}
 function setCurrent(e){
 	e.preventDefault();
 	var currentVal = $(this).text();
@@ -119,12 +161,10 @@ function openDropdown(e){
 	e.preventDefault();
 	$(this).parents('.dropdown-container').find('.popup').toggleClass('open');
 }
-
 function toggleGroup(e){
 	var group = $(this).data('target');
 	$('[data-group="'+group+'"]').toggleClass('visible');
 }
-
 function updateAddressList(e){
 	if($(this).hasClass('need-address')){
 		$('.address-list').removeClass('hidden');
@@ -139,12 +179,10 @@ function updateAddressField(e){
 		$('#user-address').addClass('hidden');
 	}
 }
-  
 function setLargeImage(){
   var src = $(this).css('background-image');
   $('.product-image').css("background-image", src);
 }
-
 function expandDetails(e){
 
 	var path = e.originalEvent.path;
@@ -163,7 +201,6 @@ function expandDetails(e){
 	}
 
 }
-
 loadScript = (url, callback) => {
 
   var script = document.createElement("script")
@@ -186,7 +223,6 @@ loadScript = (url, callback) => {
   script.src = url;
   document.getElementsByTagName("head")[0].appendChild(script);
 }
-
 initShapeShifter = () => {
   chameleonPolygons = document.querySelector('#chameleon').querySelectorAll('polygon');
   corgyPolygons = document.querySelector('#corgy').querySelectorAll('polygon');
@@ -221,30 +257,25 @@ initShapeShifter = () => {
   loop();
   startTimer();
 }
-
 closeSidenav = e => {
   e.preventDefault();
   sidenav.close();
 }
-
 nextSlide = () => {
   clearInterval(timer);
   next();
   startTimer();
 }
-
 startTimer = () => {
   timer = setInterval(() => {
     next()
   }, 10000);
 }
-
 loop = () => {
   shapeshifter.loop();
   shapeshifterStroke.loop();
   window.requestAnimationFrame(loop);
 }
-
 next = () => {
   animationState++;
   if(animationState>=all.length)animationState=0;

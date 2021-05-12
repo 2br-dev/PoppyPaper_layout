@@ -79,11 +79,21 @@
         }
     }
 
+    & #videos{
+
+        & iframe{
+            max-width: 100%;
+            margin-bottom: 1.5rem;
+        }
+    }
+
     & #product-gallery{
 
         margin: 50px 0;
 
         & .gallery-image{
+
+            cursor: pointer;
     
             & .lazy{
                 padding-top: 100%;

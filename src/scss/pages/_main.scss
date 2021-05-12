@@ -80,6 +80,111 @@
 
     & #catalog{
         padding-bottom: 50px;
+
+        & .filters{
+
+            display: flex;
+
+            & .filters-block{
+
+                margin-right: 20px;
+                position: relative;
+
+
+                & .current{
+                    display: flex;
+                    line-height: 37px;
+                    padding: 0 5px;
+                    background: #efefef;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    
+                    & .key{
+                        padding: 0 5px;
+                    }
+                    
+                    & .value{
+                        padding: 0 5px;
+                        color: $primary-color;
+                    }
+
+                    & .reset-wrapper{
+                        padding: 0 5px;
+
+                        & .reset-filter{
+                            color: #777;
+                        }
+                    }
+                }
+
+                & .values{
+                    box-shadow: 0 2px 8px rgba(black, .4);
+                    border-radius: 4px;
+                    overflow: hidden;
+                    min-width: 100%;
+                    margin: 0;
+                    position: absolute;
+                    z-index: 20;
+                    background: #fff;
+                    top: calc(100% - 20px);
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: top .4s, opacity .4s;
+
+                    & li{
+
+                        transition: background-color .2s;
+
+                        &:hover{
+                            background: #efefef;
+                        }
+
+                        & input[type="checkbox"]{
+                            display: none;
+
+                            & ~ label{
+
+                                cursor: pointer;
+                                
+                                &:before{
+                                    content: '\F012C';
+                                    font-family: 'Material Design Icons';
+                                    margin-right: 10px;
+                                    transition: color .2s;
+                                    color: transparent;
+                                }
+                            }
+
+                            &:checked ~ label:before{
+                                color: black;
+                            }
+                        }
+
+                        & a, & label{
+                            display: block;
+                            line-height: 40px;
+                            padding: 0 15px;
+                        }
+
+                        & a{
+
+                            transition: background-color .2s, color .2s;
+
+                            &.active{
+                                background-color: $primary-color !important;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                &:hover .values{
+                    pointer-events: all;
+                    opacity: 1;
+                    top: 100%;
+                }
+            }
+        }
     }
     
     & #howto{
