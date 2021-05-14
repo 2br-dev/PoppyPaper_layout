@@ -14,7 +14,8 @@ var
   similar,
   modals, 
   tabs,
-  gallery;
+  gallery,
+  Swiper;
 
 const PATH = "";
 
@@ -78,23 +79,31 @@ init = () => {
       similar.on("slideChange", function(){
         $('.lazy').lazy();
       });
-
-      gallery = new Swiper('#product-gallery', {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        loop: true
-      });
-      gallery.on("slideChange", () => {
-        $('.lazy').lazy();
-      });
     })
   }
-  
-  if($('.swiper-container#product-gallery').length){
 
+  if($('#product-gallery').length){
+
+    if(Swiper == null){
+      loadScript(PATH + "/js/swiper-bundle.js", () => {
+        createGallerySwiper();
+      })
+    }else{
+      createGallerySwiper();
+    }
   }
 }
 
+function createGallerySwiper(){
+    gallery = new Swiper('#product-gallery', {
+      slidesPerView: 4,
+      spaceBetween: 10,
+      loop: true
+    });
+    gallery.on("slideChange", () => {
+      $('.lazy').lazy();
+    });
+}
 
 function resetFilter(){
   var filter = $(this).parents('.filters-block');

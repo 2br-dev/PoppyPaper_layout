@@ -4807,7 +4807,8 @@ body {
     margin-bottom: 20px;
     display: flex;
     height: calc(100% - 20px);
-    flex-direction: column; }
+    flex-direction: column;
+    position: relative; }
     body .product .photo {
       padding-top: 100%;
       background-size: cover;
@@ -4846,14 +4847,26 @@ body {
             transform: none; }
     body .product .product-header {
       font-size: 24px;
-      font-weight: 700;
       line-height: 27px; }
     body .product .separator {
       flex-grow: 1; }
     body .product .price {
-      color: #ee6e73;
+      color: black;
       font-weight: 700;
-      font-size: 21px; }
+      font-size: 21px;
+      margin-bottom: 20px; }
+  body .labels-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 18; }
+    body .labels-wrapper .label {
+      padding: 0 10px;
+      margin-bottom: 6px;
+      background: linear-gradient(to right, #ee6e73 80%, #e94047 100%);
+      color: #fff;
+      border-start-start-radius: 4px;
+      border-end-start-radius: 4px; }
   body #instructions {
     border-top: 1px dashed #ccc;
     position: relative; }
@@ -4880,6 +4893,14 @@ body {
       font-weight: 700; }
   body .swiper-slide {
     height: auto; }
+  body .promo-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transform: translatey(24px); }
+    body .promo-wrapper .btn, body .promo-wrapper .btn-large, body .promo-wrapper .btn-small {
+      transform: translatey(-7px);
+      margin-left: 10px; }
 
 header {
   position: relative;
@@ -5360,11 +5381,11 @@ th {
 
 #product .product-image {
   margin: 40px 0;
-  height: calc(100% - 90px);
   padding-top: 100%;
   background-position: center;
   background-size: cover;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
 
 #product .price {
   color: #ee6e73;
@@ -5430,6 +5451,20 @@ th {
       margin-left: 20px;
       display: inline-block;
       line-height: 30px; }
+
+#product .chars {
+  display: table;
+  margin: 30px 0; }
+  #product .chars .kv-pair {
+    display: table-row; }
+    #product .chars .kv-pair .key, #product .chars .kv-pair .value {
+      display: table-cell;
+      padding-right: 20px;
+      padding-bottom: 20px; }
+
+@media (max-width: 800px) {
+  #product .product-data-wrapper {
+    order: 5; } }
 
 #checkout-wrapper .mdi-map-marker {
   color: #ee6e73;

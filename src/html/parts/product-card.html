@@ -1,6 +1,11 @@
 <div class="col l3 m4 s6 xs12 t12">
     <div class="product">
         <div class="photo lazy" data-src="@@image">
+            <div class="labels-wrapper">
+                @@for(var i=0; i<labels.length; i++){
+                    <div class="label">`+labels[i]+`</div>
+                }
+            </div>
             <div class="actions-wrapper">
                 <div class="actions">
                     <a href=""><i class="mdi mdi-share-variant"></i><span>Поделиться</span></a>

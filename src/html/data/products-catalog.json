@@ -3,96 +3,123 @@
         "title": "Batman111",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/batman.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Композиция в стеклянном клоше",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/castle.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": [
+            "Акция"
+        ]
     },
     {
         "title": "Deadpool",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/deadpool.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": [
+            "Новинка"
+        ]
     },
     {
         "title": "Собака",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dog.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": [
+            "Акция"
+        ]
     },
     {
         "title": "Собака",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dog2.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Собака",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dog3.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": [
+            "Новинка",
+            "Акция"
+        ]
     },
     {
         "title": "Собака",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dog4.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": [
+            "Акция"
+        ]
     },
     {
         "title": "Дракон",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dragon.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Batman",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/batman.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Композиция в стеклянном клоше",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/castle.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Deadpool",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/deadpool.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Собака",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dog.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Собака",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dog2.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Собака",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dog3.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Собака",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dog4.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     },
     {
         "title": "Дракон",
         "description": "Размер: 55х26х15 см",
         "image": "/img/products/dragon.jpg",
-        "price": 2700
+        "price": 2700,
+        "labels": []
     }
 ]
